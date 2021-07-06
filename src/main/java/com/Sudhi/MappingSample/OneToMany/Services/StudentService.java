@@ -27,7 +27,10 @@ public class StudentService {
         return student.get();
     }
     public List<Student> getStudents(){
-
         return (List<Student>) stRepo.findAll();
+    }
+
+    public void deleteStudentById(int id) {
+        stRepo.deleteById(id);
     }
 }
